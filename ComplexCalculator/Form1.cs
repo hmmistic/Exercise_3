@@ -188,6 +188,16 @@ namespace ComplexCalculator
 
             else
             {
+                if (richTextBox1.Text.Contains('.'))
+                {
+                    DotWasClicked = true;
+                }
+
+                else
+                {
+                    DotWasClicked = false;
+                }
+
                 richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1, 1);
             }
         }
