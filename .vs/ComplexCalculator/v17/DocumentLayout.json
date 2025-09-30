@@ -1,9 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C# lesson\\ComplexCalculator\\",
+  "WorkspaceRootPath": "C:\\Users\\Rashad\\source\\repos\\Exercise_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F0DC55D0-9F14-42F9-996E-85BCBC7A27C7}|ComplexCalculator\\ComplexCalculator.csproj|d:\\c# lesson\\complexcalculator\\complexcalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F0DC55D0-9F14-42F9-996E-85BCBC7A27C7}|ComplexCalculator\\ComplexCalculator.csproj|c:\\users\\rashad\\source\\repos\\exercise_3\\complexcalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F0DC55D0-9F14-42F9-996E-85BCBC7A27C7}|ComplexCalculator\\ComplexCalculator.csproj|solutionrelative:complexcalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F0DC55D0-9F14-42F9-996E-85BCBC7A27C7}|ComplexCalculator\\ComplexCalculator.csproj|C:\\Users\\Rashad\\source\\repos\\Exercise_3\\complexcalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F0DC55D0-9F14-42F9-996E-85BCBC7A27C7}|ComplexCalculator\\ComplexCalculator.csproj|solutionrelative:complexcalculator\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,19 +18,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "D:\\C# lesson\\ComplexCalculator\\ComplexCalculator\\Form1.cs",
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Rashad\\source\\repos\\Exercise_3\\ComplexCalculator\\Form1.cs",
               "RelativeDocumentMoniker": "ComplexCalculator\\Form1.cs",
-              "ToolTip": "D:\\C# lesson\\ComplexCalculator\\ComplexCalculator\\Form1.cs [Design]",
+              "ToolTip": "C:\\Users\\Rashad\\source\\repos\\Exercise_3\\ComplexCalculator\\Form1.cs",
+              "RelativeToolTip": "ComplexCalculator\\Form1.cs",
+              "ViewState": "AgIAAKwAAAAAAAAAAAAkwC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T15:45:46.854Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Rashad\\source\\repos\\Exercise_3\\ComplexCalculator\\Form1.cs",
+              "RelativeDocumentMoniker": "ComplexCalculator\\Form1.cs",
+              "ToolTip": "C:\\Users\\Rashad\\source\\repos\\Exercise_3\\ComplexCalculator\\Form1.cs [Design]",
               "RelativeToolTip": "ComplexCalculator\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T05:52:38.135Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-09-29T05:52:38.135Z"
             }
           ]
         }

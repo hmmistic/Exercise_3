@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ComplexCalculator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d56c265c7f1318fed9ea91ee9aca3175f76c1af9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ComplexCalculator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ComplexCalculator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
