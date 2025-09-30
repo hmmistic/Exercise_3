@@ -134,13 +134,13 @@ namespace ComplexCalculator
 
         private void ClearEntry_Click(object sender, EventArgs e)
         {
-            if (richTextBox1.Text.Length < 2) { richTextBox1.Text = "0"; result = 0; DotWasClicked = false; }
+            if (richTextBox1.Text.Length < 2 || richTextBox1.Text == "0") { richTextBox1.Text = "0"; result = 0; DotWasClicked = false; }
 
             else
             {
+                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1, 1);
                 if (richTextBox1.Text.Contains('.')) DotWasClicked = true;
                 else DotWasClicked = false;
-                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1, 1);
             }
         }
 
