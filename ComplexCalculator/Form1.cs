@@ -23,7 +23,7 @@ namespace ComplexCalculator
         private void Operation(string o)
         {
             operation = o;
-            if (result.ToString() == "0") num1 = Convert.ToDouble(richTextBox1.Text);
+            if (result.ToString() == "0") double.TryParse(richTextBox1.Text, out num1);
             else num1 = result;
             richTextBox1.Text = "0";
             DotWasClicked = false;
@@ -86,7 +86,8 @@ namespace ComplexCalculator
 
         private void Minus_Click(object sender, EventArgs e)
         {
-            Operation("-");
+            if (richTextBox1.Text == "0") richTextBox1.Text = "-";
+            else Operation("-");
         }
 
         private void Multiply_Click(object sender, EventArgs e)
@@ -117,7 +118,7 @@ namespace ComplexCalculator
 
         private void Result_Click(object sender, EventArgs e)
         {
-            num2 = Convert.ToDouble(richTextBox1.Text);
+            double.TryParse(richTextBox1.Text, out num2);
             if (operation == "+") result = num1 + num2;
 
             if (operation == "-") result = num1 - num2;
@@ -134,7 +135,7 @@ namespace ComplexCalculator
 
         private void ClearEntry_Click(object sender, EventArgs e)
         {
-            if (richTextBox1.Text.Length < 2 || richTextBox1.Text == "0") { richTextBox1.Text = "0"; result = 0; DotWasClicked = false; }
+            if (richTextBox1.Text.Length < 2) { richTextBox1.Text = "0"; result = 0; DotWasClicked = false; }
 
             else
             {
