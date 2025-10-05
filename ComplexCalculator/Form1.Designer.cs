@@ -46,10 +46,13 @@
             Result = new Button();
             Digit0 = new Button();
             Dot = new Button();
-            Percentage = new Button();
-            Square = new Button();
+            Mod = new Button();
+            Sqrt = new Button();
             ClearAll = new Button();
             ClearEntry = new Button();
+            listBox1 = new ListBox();
+            Clear = new Button();
+            Delete = new Button();
             SuspendLayout();
             // 
             // richTextBox1
@@ -220,25 +223,25 @@
             Dot.UseVisualStyleBackColor = true;
             Dot.Click += Dot_Click;
             // 
-            // Percentage
+            // Mod
             // 
-            Percentage.Location = new Point(238, 137);
-            Percentage.Name = "Percentage";
-            Percentage.Size = new Size(55, 45);
-            Percentage.TabIndex = 24;
-            Percentage.Text = "%";
-            Percentage.UseVisualStyleBackColor = true;
-            Percentage.Click += Percentage_Click;
+            Mod.Location = new Point(238, 137);
+            Mod.Name = "Mod";
+            Mod.Size = new Size(55, 45);
+            Mod.TabIndex = 24;
+            Mod.Text = "%";
+            Mod.UseVisualStyleBackColor = true;
+            Mod.Click += Mod_Click;
             // 
-            // Square
+            // Sqrt
             // 
-            Square.Location = new Point(161, 137);
-            Square.Name = "Square";
-            Square.Size = new Size(55, 45);
-            Square.TabIndex = 23;
-            Square.Text = "Sqrt";
-            Square.UseVisualStyleBackColor = true;
-            Square.Click += Square_Click;
+            Sqrt.Location = new Point(161, 137);
+            Sqrt.Name = "Sqrt";
+            Sqrt.Size = new Size(55, 45);
+            Sqrt.TabIndex = 23;
+            Sqrt.Text = "Sqrt";
+            Sqrt.UseVisualStyleBackColor = true;
+            Sqrt.Click += Sqrt_Click;
             // 
             // ClearAll
             // 
@@ -260,14 +263,47 @@
             ClearEntry.UseVisualStyleBackColor = true;
             ClearEntry.Click += ClearEntry_Click;
             // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 25;
+            listBox1.Location = new Point(318, 12);
+            listBox1.Name = "listBox1";
+            listBox1.SelectionMode = SelectionMode.MultiSimple;
+            listBox1.Size = new Size(199, 404);
+            listBox1.TabIndex = 25;
+            // 
+            // Clear
+            // 
+            Clear.Location = new Point(318, 429);
+            Clear.Name = "Clear";
+            Clear.Size = new Size(94, 45);
+            Clear.TabIndex = 26;
+            Clear.Text = "Clear";
+            Clear.UseVisualStyleBackColor = true;
+            Clear.Click += Clear_Click;
+            // 
+            // Delete
+            // 
+            Delete.Location = new Point(423, 429);
+            Delete.Name = "Delete";
+            Delete.Size = new Size(94, 45);
+            Delete.TabIndex = 27;
+            Delete.Text = "Delete";
+            Delete.UseVisualStyleBackColor = true;
+            Delete.Click += Delete_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(0, 64, 64);
-            ClientSize = new Size(307, 488);
-            Controls.Add(Percentage);
-            Controls.Add(Square);
+            ClientSize = new Size(530, 488);
+            Controls.Add(Delete);
+            Controls.Add(Clear);
+            Controls.Add(listBox1);
+            Controls.Add(Mod);
+            Controls.Add(Sqrt);
             Controls.Add(ClearAll);
             Controls.Add(ClearEntry);
             Controls.Add(Divide);
@@ -315,9 +351,12 @@
         private Button Result;
         private Button Digit0;
         private Button Dot;
-        private Button Percentage;
-        private Button Square;
+        private Button Mod;
+        private Button Sqrt;
         private Button ClearAll;
         private Button ClearEntry;
+        private ListBox listBox1;
+        private Button Clear;
+        private Button Delete;
     }
 }

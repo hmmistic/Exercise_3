@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace ComplexCalculator
 {
     public partial class Form1 : Form
@@ -21,8 +23,7 @@ namespace ComplexCalculator
         private void Operation(string o)
         {
             operation = o;
-            if (result.ToString() == "0") double.TryParse(richTextBox1.Text, out num1);
-            else num1 = result;
+            num1 = double.Parse(richTextBox1.Text);
             richTextBox1.Text = "0";
         }
 
@@ -115,7 +116,7 @@ namespace ComplexCalculator
 
         private void Result_Click(object sender, EventArgs e)
         {
-            double.TryParse(richTextBox1.Text, out num2);
+            num2 = double.Parse(richTextBox1.Text);
             switch (operation)
             {
                 case "+":
@@ -124,7 +125,7 @@ namespace ComplexCalculator
                 case "-":
                     result = num1 - num2; break;
 
-                case "*":
+                case "x":
                     result = num1 * num2; break;
 
                 case "/":
@@ -138,6 +139,7 @@ namespace ComplexCalculator
                     result = Math.Sqrt(result); break;
             }
             richTextBox1.Text = result.ToString();
+            listBox1.Items.Add($"{num1} {operation} {num2} = {result}");
         }
 
         private void ClearEntry_Click(object sender, EventArgs e)
@@ -159,5 +161,17 @@ namespace ComplexCalculator
             operation = "";
         }
 
+        private void Clear_Click(object sender, EventArgs e)
+        {
+            listBox1.Items.Clear();
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            while (listBox1.SelectedItems.Count > 0)
+            {
+                listBox1.Items.Remove(listBox1.SelectedItems[0]);
+            }
+        }
     }
 }
