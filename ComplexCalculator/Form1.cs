@@ -12,8 +12,6 @@ namespace ComplexCalculator
             InitializeComponent();
         }
 
-        private bool DotWasClicked = false;
-
         private void AppendDigit(string d)
         {
             if (richTextBox1.Text == "0") richTextBox1.Text = d;
@@ -26,7 +24,6 @@ namespace ComplexCalculator
             if (result.ToString() == "0") double.TryParse(richTextBox1.Text, out num1);
             else num1 = result;
             richTextBox1.Text = "0";
-            DotWasClicked = false;
         }
 
         private void Digit1_Click(object sender, EventArgs e)
@@ -100,49 +97,57 @@ namespace ComplexCalculator
             Operation("/");
         }
 
-        private void Square_Click(object sender, EventArgs e)
+        private void Sqrt_Click(object sender, EventArgs e)
         {
-            Operation("^");
+            Operation("sqrt");
         }
 
-        private void Percentage_Click(object sender, EventArgs e)
+        private void Mod_Click(object sender, EventArgs e)
         {
             Operation("%");
         }
 
         private void Dot_Click(object sender, EventArgs e)
         {
-            if (DotWasClicked) return;
-            else { richTextBox1.Text += "."; DotWasClicked = true; }
+            if (richTextBox1.Text.Contains('.')) return;
+            else richTextBox1.Text += ".";
         }
 
         private void Result_Click(object sender, EventArgs e)
         {
             double.TryParse(richTextBox1.Text, out num2);
-            if (operation == "+") result = num1 + num2;
+            switch (operation)
+            {
+                case "+":
+                    result = num1 + num2; break;
 
-            if (operation == "-") result = num1 - num2;
+                case "-":
+                    result = num1 - num2; break;
 
-            if (operation == "x") result = num1 * num2;
+                case "*":
+                    result = num1 * num2; break;
 
-            if (operation == "/") result = num1 / num2;
+                case "/":
+                    result = num1 / num2; break;
 
-            if (operation == "^") result = Math.Pow(num1, num2);
+                case "%":
+                    result = num1 % num2; break;
 
-            if (operation == "%") result = (num1 * num2) / 100;
+                case "sqrt":
+                    result = double.Parse(richTextBox1.Text);
+                    result = Math.Sqrt(result); break;
+            }
             richTextBox1.Text = result.ToString();
         }
 
         private void ClearEntry_Click(object sender, EventArgs e)
         {
-            if (richTextBox1.Text.Length < 2) { richTextBox1.Text = "0"; result = 0; DotWasClicked = false; }
-
-            else
+            if (richTextBox1.Text.Length > 1)
             {
-                richTextBox1.Text = richTextBox1.Text.Remove(richTextBox1.Text.Length - 1, 1);
-                if (richTextBox1.Text.Contains('.')) DotWasClicked = true;
-                else DotWasClicked = false;
+                richTextBox1.Text = richTextBox1.Text.Substring(0, richTextBox1.Text.Length - 1);
             }
+
+            else richTextBox1.Text = "0";
         }
 
         private void ClearAll_Click(object sender, EventArgs e)
@@ -152,7 +157,7 @@ namespace ComplexCalculator
             num2 = 0;
             result = 0;
             operation = "";
-            DotWasClicked = false;
         }
+
     }
 }
